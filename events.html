@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ORBC events and competition calendar — upcoming events and past competition results." />
+  <title>Events — ORBC Boxing Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/events.css" />
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <main>
+
+    <header class="page-hero">
+      <div class="page-hero__bg" style="background-image:url('assets/images/events-hero.jpg')"></div>
+      <div class="container page-hero__content">
+        <p class="page-hero__label">Competition &amp; Events</p>
+        <h1 class="page-hero__title">Events</h1>
+      </div>
+    </header>
+
+    <section class="section section--dark" aria-labelledby="events-title">
+      <div class="container">
+        <div class="events-layout">
+
+          <!-- Calendar -->
+          <div class="events-calendar-wrap reveal">
+            <div class="calendar" id="calendar">
+              <div class="calendar__header">
+                <button class="calendar__nav" id="cal-prev" aria-label="Previous month">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span class="calendar__month-label" id="cal-month-label"></span>
+                <button class="calendar__nav" id="cal-next" aria-label="Next month">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </div>
+              <div class="calendar__weekdays">
+                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+              </div>
+              <div class="calendar__days" id="cal-days"></div>
+            </div>
+
+            <div class="calendar-legend">
+              <span class="cal-dot cal-dot--competition"></span> Competition
+              <span class="cal-dot cal-dot--community"></span> Community
+              <span class="cal-dot cal-dot--upcoming"></span> Upcoming
+            </div>
+          </div>
+
+          <!-- Event detail panel -->
+          <div class="events-panel" id="events-panel">
+            <div class="events-panel__empty" id="panel-empty">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--white-muted)" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <p>Select a date on the calendar to view event details.</p>
+            </div>
+            <div class="events-panel__detail" id="panel-detail" hidden></div>
+          </div>
+
+        </div>
+
+        <!-- All events list -->
+        <div style="margin-top:80px;">
+          <span class="section-label reveal">All Events</span>
+          <h2 class="section-title reveal" id="events-title" style="margin-bottom:40px;">
+            Competition <span>History</span>
+          </h2>
+          <div class="events-list" id="events-list">
+            <!-- Rendered by events.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-placeholder"></div>
+  <script type="module" src="js/events.js"></script>
+</body>
+</html>

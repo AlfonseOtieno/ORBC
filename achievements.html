@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ORBC achievements — competition medals, notable fighters, and yearly records since 2014." />
+  <title>Achievements — ORBC Boxing Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/achievements.css" />
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <main>
+
+    <header class="page-hero">
+      <div class="page-hero__bg" style="background-image:url('assets/images/achievements-group.jpg')"></div>
+      <div class="container page-hero__content">
+        <p class="page-hero__label">Track Record</p>
+        <h1 class="page-hero__title">Achievements</h1>
+      </div>
+    </header>
+
+    <!-- Total medals -->
+    <section class="section section--mid achievements-totals" aria-label="Total medals">
+      <div class="container">
+        <div class="achievements-totals__grid">
+          <div class="total-medal total-medal--gold reveal reveal-d1">
+            <span class="total-medal__count" data-count="18">0</span>
+            <span class="total-medal__label">Gold Medals</span>
+          </div>
+          <div class="total-medal total-medal--silver reveal reveal-d2">
+            <span class="total-medal__count" data-count="13">0</span>
+            <span class="total-medal__label">Silver Medals</span>
+          </div>
+          <div class="total-medal total-medal--bronze reveal reveal-d3">
+            <span class="total-medal__count" data-count="16">0</span>
+            <span class="total-medal__label">Bronze Medals</span>
+          </div>
+          <div class="total-medal total-medal--total reveal reveal-d4">
+            <span class="total-medal__count" data-count="47">0</span>
+            <span class="total-medal__label">Total Medals</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Headline achievements -->
+    <section class="section section--dark" aria-labelledby="headline-title">
+      <div class="container">
+        <div class="reveal" style="margin-bottom:48px;">
+          <span class="section-label">Milestones</span>
+          <h2 class="section-title" id="headline-title">Club <span>Highlights</span></h2>
+        </div>
+        <div class="headline-grid" id="headline-achievements">
+          <!-- Rendered by achievements.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Notable fighters -->
+    <section class="section section--mid" aria-labelledby="fighters-title">
+      <div class="container">
+        <div class="reveal" style="margin-bottom:48px;">
+          <span class="section-label">Our Champions</span>
+          <h2 class="section-title" id="fighters-title">Notable <span>Fighters</span></h2>
+        </div>
+        <div class="fighters-grid" id="notable-fighters">
+          <!-- Rendered by achievements.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Year by year record -->
+    <section class="section section--dark" aria-labelledby="yearly-title">
+      <div class="container">
+        <div class="reveal" style="margin-bottom:48px;">
+          <span class="section-label">Competition History</span>
+          <h2 class="section-title" id="yearly-title">Year by <span>Year</span></h2>
+        </div>
+        <div class="yearly-records" id="yearly-records">
+          <!-- Rendered by achievements.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-placeholder"></div>
+  <script type="module" src="js/achievements.js"></script>
+</body>
+</html>

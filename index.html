@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ongata Rongai Boxing Club — Building fighters, discipline, and community since 2014. Daily training 6PM–8PM in Ongata Rongai, Nairobi." />
+  <title>ORBC — Ongata Rongai Boxing Club</title>
+
+  <!-- Preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <div id="nav-placeholder"></div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Hero">
+
+      <!-- Video background -->
+      <div class="hero__media">
+        <video
+          class="hero__video"
+          autoplay muted loop playsinline
+          poster="assets/images/hero-placeholder.jpg"
+          aria-hidden="true"
+        >
+          <source src="assets/videos/hero-placeholder.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__overlay"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="container hero__content">
+        <div class="hero__eyebrow">
+          <span class="hero__eyebrow-line"></span>
+          <span>Ongata Rongai · Est. 2014</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="hero__title-line hero__title-line--1">Forged</span>
+          <span class="hero__title-line hero__title-line--2">in Ongata</span>
+          <span class="hero__title-line hero__title-line--3">Rongai.</span>
+        </h1>
+
+        <p class="hero__sub">
+          Build strength. Develop discipline.<br />
+          Become part of something bigger.
+        </p>
+
+        <div class="hero__actions">
+          <a href="tel:+254725138063" class="btn btn--primary hero__btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Book Free Session
+          </a>
+          <a href="contact.html" class="btn btn--outline hero__btn">
+            Send a Message
+          </a>
+        </div>
+
+        <div class="hero__meta">
+          <div class="hero__meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Daily · 6PM – 8PM
+          </div>
+          <div class="hero__meta-dot"></div>
+          <div class="hero__meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Magadi Road, Ongata Rongai
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         STATS BAR
+    ════════════════════════════════════════════════ -->
+    <section class="stats-bar" aria-label="Club statistics">
+      <div class="container">
+        <div class="stats-bar__grid">
+          <div class="stats-bar__item reveal reveal-d1">
+            <span class="stats-bar__number" data-count="11">0</span>
+            <span class="stats-bar__label">Years of Boxing</span>
+          </div>
+          <div class="stats-bar__divider" aria-hidden="true"></div>
+          <div class="stats-bar__item reveal reveal-d2">
+            <span class="stats-bar__number" data-count="200">0</span>
+            <span class="stats-bar__label">Athletes Trained</span>
+          </div>
+          <div class="stats-bar__divider" aria-hidden="true"></div>
+          <div class="stats-bar__item reveal reveal-d3">
+            <span class="stats-bar__number" data-count="47">0</span>
+            <span class="stats-bar__label">Medals Won</span>
+          </div>
+          <div class="stats-bar__divider" aria-hidden="true"></div>
+          <div class="stats-bar__item reveal reveal-d4">
+            <span class="stats-bar__number" data-count="18">0</span>
+            <span class="stats-bar__label">Gold Medals</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         ABOUT SNIPPET
+    ════════════════════════════════════════════════ -->
+    <section class="section section--dark home-about" aria-labelledby="home-about-title">
+      <div class="container">
+        <div class="home-about__grid">
+
+          <div class="home-about__image-wrap reveal reveal--left">
+            <img
+              data-src="assets/images/about-training.jpg"
+              src="assets/images/hero-placeholder.jpg"
+              alt="Training at ORBC"
+              class="home-about__image"
+              width="600" height="700"
+            />
+            <div class="home-about__image-tag">
+              <span class="home-about__image-tag-num">2014</span>
+              <span class="home-about__image-tag-text">Founded</span>
+            </div>
+          </div>
+
+          <div class="home-about__text reveal">
+            <span class="section-label">About ORBC</span>
+            <h2 class="section-title" id="home-about-title">
+              More Than a Gym.<br />
+              <span>A Community.</span>
+            </h2>
+            <span class="accent-line"></span>
+            <p class="body-text">
+              Ongata Rongai Boxing Club was founded with one mission: use boxing as a tool for personal development, youth empowerment, and community. We are not just producing fighters — we are producing disciplined, confident, resilient young people.
+            </p>
+            <p class="body-text" style="margin-top:16px;">
+              Under the guidance of Head Coach Michael Ragot, we have trained over 200 young people from Ongata Rongai and the surrounding areas since 2014. Our fighters compete at county, regional, and national levels — and they win.
+            </p>
+            <a href="about.html" class="btn btn--ghost" style="margin-top:32px;">
+              Our Full Story
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         WHY ORBC — 3 PILLARS
+    ════════════════════════════════════════════════ -->
+    <section class="section section--mid home-pillars" aria-labelledby="pillars-title">
+      <div class="container">
+        <div class="home-pillars__header reveal">
+          <span class="section-label">Why Train With Us</span>
+          <h2 class="section-title" id="pillars-title">What We Stand For</h2>
+        </div>
+        <div class="home-pillars__grid">
+          <div class="pillar reveal reveal-d1">
+            <div class="pillar__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="pillar__title">Discipline First</h3>
+            <p class="pillar__text">Boxing teaches you respect, structure, and commitment. These are not just gym values — they shape who you become outside it.</p>
+          </div>
+          <div class="pillar reveal reveal-d2">
+            <div class="pillar__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="pillar__title">Real Community</h3>
+            <p class="pillar__text">From Ongata Rongai, for Ongata Rongai. When you walk through our doors, you become part of a family that pushes each other to be better.</p>
+          </div>
+          <div class="pillar reveal reveal-d3">
+            <div class="pillar__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="pillar__title">Compete &amp; Win</h3>
+            <p class="pillar__text">We send fighters to county, regional, and national competitions. 47 medals and counting. We train to compete — and we compete to win.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         PROGRAMS PREVIEW
+    ════════════════════════════════════════════════ -->
+    <section class="section section--dark home-programs" aria-labelledby="programs-title">
+      <div class="container">
+        <div class="home-programs__header reveal">
+          <span class="section-label">What We Offer</span>
+          <h2 class="section-title" id="programs-title">
+            Our <span>Programs</span>
+          </h2>
+        </div>
+        <div class="home-programs__grid">
+
+          <article class="program-card reveal reveal-d1">
+            <div class="program-card__img-wrap">
+              <img
+                data-src="assets/images/program-youth.jpg"
+                src="assets/images/hero-placeholder.jpg"
+                alt="Youth Boxing Program"
+                class="program-card__img"
+                width="400" height="280"
+                loading="lazy"
+              />
+              <span class="program-card__badge">Ages 8–14</span>
+            </div>
+            <div class="program-card__body">
+              <h3 class="program-card__title">Youth Boxing</h3>
+              <p class="program-card__text">Our flagship program. Structured fundamentals, discipline, and confidence-building for young people aged 8–14.</p>
+              <a href="programs.html#youth" class="program-card__link">
+                Learn More
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="program-card reveal reveal-d2">
+            <div class="program-card__img-wrap">
+              <img
+                data-src="assets/images/program-adult.jpg"
+                src="assets/images/hero-placeholder.jpg"
+                alt="Adult Boxing Program"
+                class="program-card__img"
+                width="400" height="280"
+                loading="lazy"
+              />
+              <span class="program-card__badge">Ages 15+</span>
+            </div>
+            <div class="program-card__body">
+              <h3 class="program-card__title">Adult Boxing</h3>
+              <p class="program-card__text">All skill levels welcome. Train for fitness, self-defence, or competition. Real boxing, real coaches.</p>
+              <a href="programs.html#adult" class="program-card__link">
+                Learn More
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="program-card reveal reveal-d3">
+            <div class="program-card__img-wrap">
+              <img
+                data-src="assets/images/program-competition.jpg"
+                src="assets/images/hero-placeholder.jpg"
+                alt="Competition Training"
+                class="program-card__img"
+                width="400" height="280"
+                loading="lazy"
+              />
+              <span class="program-card__badge">Invite Only</span>
+            </div>
+            <div class="program-card__body">
+              <h3 class="program-card__title">Competition Training</h3>
+              <p class="program-card__text">For fighters ready to compete. High-intensity preparation for county, regional, and national tournaments.</p>
+              <a href="programs.html#competition" class="program-card__link">
+                Learn More
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+        <div style="text-align:center;margin-top:48px;" class="reveal">
+          <a href="programs.html" class="btn btn--outline">View All Programs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         ACHIEVEMENTS SNAPSHOT
+    ════════════════════════════════════════════════ -->
+    <section class="section home-achievements" aria-labelledby="achievements-title">
+      <div class="home-achievements__bg">
+        <img
+          data-src="assets/images/achievements-group.jpg"
+          src="assets/images/hero-placeholder.jpg"
+          alt="ORBC fighters with medals and certificates"
+          class="home-achievements__bg-img"
+          width="1400" height="800"
+          loading="lazy"
+        />
+        <div class="home-achievements__overlay"></div>
+      </div>
+      <div class="container home-achievements__content">
+        <span class="section-label reveal">Our Record</span>
+        <h2 class="section-title home-achievements__title reveal" id="achievements-title">
+          Built on <span>Wins.</span>
+        </h2>
+        <p class="body-text home-achievements__text reveal reveal-d1">
+          Since 2014, ORBC fighters have competed across Kenya — from county opens to regional championships. Every medal represents months of sacrifice, early mornings, and total commitment.
+        </p>
+        <div class="home-achievements__medals reveal reveal-d2">
+          <div class="medal-pill medal-pill--gold">
+            <span class="medal-pill__count" data-count="18">0</span>
+            <span class="medal-pill__label">Gold</span>
+          </div>
+          <div class="medal-pill medal-pill--silver">
+            <span class="medal-pill__count" data-count="13">0</span>
+            <span class="medal-pill__label">Silver</span>
+          </div>
+          <div class="medal-pill medal-pill--bronze">
+            <span class="medal-pill__count" data-count="16">0</span>
+            <span class="medal-pill__label">Bronze</span>
+          </div>
+        </div>
+        <a href="achievements.html" class="btn btn--primary reveal reveal-d3" style="margin-top:40px;">
+          Full Achievement Record
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         GALLERY TEASER
+    ════════════════════════════════════════════════ -->
+    <section class="section section--mid home-gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="home-gallery__header reveal">
+          <div>
+            <span class="section-label">From the Gym</span>
+            <h2 class="section-title" id="gallery-title">Life at <span>ORBC</span></h2>
+          </div>
+          <a href="gallery.html" class="btn btn--ghost hide-mobile">View Full Gallery</a>
+        </div>
+        <div class="home-gallery__grid" id="gallery-teaser">
+          <!-- Populated by home.js -->
+        </div>
+        <div style="text-align:center;margin-top:32px;" class="hide-desktop reveal">
+          <a href="gallery.html" class="btn btn--ghost">View Full Gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         CTA BAND
+    ════════════════════════════════════════════════ -->
+    <section class="section cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band__inner reveal">
+          <div class="cta-band__text">
+            <span class="section-label">Ready?</span>
+            <h2 class="section-title cta-band__title" id="cta-title">
+              Your first session<br />is <span>free.</span>
+            </h2>
+          </div>
+          <div class="cta-band__actions">
+            <a href="tel:+254725138063" class="btn btn--primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call to Book
+            </a>
+            <a href="contact.html" class="btn btn--outline">
+              Send a Message
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>
