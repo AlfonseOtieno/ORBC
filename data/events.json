@@ -1,0 +1,239 @@
+{
+  "events": [
+    {
+      "id": "evt-2025-01",
+      "title": "Kajiado County Intermediate League Open",
+      "date": "2025-03-15",
+      "type": "competition",
+      "location": "Kajiado Sports Complex, Kajiado",
+      "description": "ORBC sent 12 fighters to the annual Kajiado County Intermediate League Open. Our athletes competed across multiple weight categories in what was our strongest showing to date.",
+      "results": {
+        "summary": "12 fighters. 8 medals. 3 gold.",
+        "gold": 3,
+        "silver": 3,
+        "bronze": 2,
+        "fighters": [
+          {
+            "name": "Brian Kamau",
+            "weight": "52kg Youth",
+            "result": "Gold Medal — Won all 3 bouts",
+            "stage": "Champion"
+          },
+          {
+            "name": "Kevin Otieno",
+            "weight": "56kg Youth",
+            "result": "Gold Medal — Won all 3 bouts by unanimous decision",
+            "stage": "Champion"
+          },
+          {
+            "name": "Mercy Wanjiku",
+            "weight": "60kg Junior Women",
+            "result": "Gold Medal — Only female fighter from ORBC, won the final",
+            "stage": "Champion"
+          },
+          {
+            "name": "Daniel Muriithi",
+            "weight": "64kg Youth",
+            "result": "Silver Medal — Lost in final by split decision",
+            "stage": "Finalist"
+          },
+          {
+            "name": "Alex Mwangi",
+            "weight": "48kg Youth",
+            "result": "Silver Medal — Lost in final on points",
+            "stage": "Finalist"
+          },
+          {
+            "name": "Samuel Njoroge",
+            "weight": "70kg Junior",
+            "result": "Silver Medal — Lost final by unanimous decision",
+            "stage": "Finalist"
+          },
+          {
+            "name": "James Odhiambo",
+            "weight": "75kg Junior",
+            "result": "Bronze Medal — Won quarter-final, lost semi",
+            "stage": "Semi-finalist"
+          },
+          {
+            "name": "Peter Kariuki",
+            "weight": "80kg Junior",
+            "result": "Bronze Medal — Reached semi-finals",
+            "stage": "Semi-finalist"
+          },
+          {
+            "name": "Collins Mwenda",
+            "weight": "67kg Youth",
+            "result": "Quarter-final exit — Lost to eventual champion",
+            "stage": "Quarter-finalist"
+          },
+          {
+            "name": "Victor Ongeso",
+            "weight": "54kg Youth",
+            "result": "Quarter-final exit",
+            "stage": "Quarter-finalist"
+          },
+          {
+            "name": "Eric Gitau",
+            "weight": "90kg Junior",
+            "result": "First round exit — Strong debut for this age group",
+            "stage": "First Round"
+          },
+          {
+            "name": "Faith Adhiambo",
+            "weight": "54kg Junior Women",
+            "result": "First round exit — Debut competition",
+            "stage": "First Round"
+          }
+        ]
+      }
+    },
+    {
+      "id": "evt-2024-03",
+      "title": "Nairobi Region Boxing Championships",
+      "date": "2024-11-08",
+      "type": "competition",
+      "location": "Kasarani Indoor Arena, Nairobi",
+      "description": "The biggest stage ORBC had competed on to date. 9 athletes represented the club at the Nairobi Region Boxing Championships, competing against clubs from across the county.",
+      "results": {
+        "summary": "9 fighters. 5 medals. 2 gold.",
+        "gold": 2,
+        "silver": 2,
+        "bronze": 1,
+        "fighters": [
+          {
+            "name": "Brian Kamau",
+            "weight": "52kg Youth",
+            "result": "Gold Medal — Dominant performance, three wins by stoppage",
+            "stage": "Champion"
+          },
+          {
+            "name": "Kevin Otieno",
+            "weight": "56kg Youth",
+            "result": "Gold Medal — Won final by unanimous decision",
+            "stage": "Champion"
+          },
+          {
+            "name": "Daniel Muriithi",
+            "weight": "64kg Youth",
+            "result": "Silver Medal",
+            "stage": "Finalist"
+          },
+          {
+            "name": "Alex Mwangi",
+            "weight": "48kg Youth",
+            "result": "Silver Medal",
+            "stage": "Finalist"
+          },
+          {
+            "name": "Mercy Wanjiku",
+            "weight": "60kg Junior Women",
+            "result": "Bronze Medal",
+            "stage": "Semi-finalist"
+          },
+          {
+            "name": "Samuel Njoroge",
+            "weight": "70kg Junior",
+            "result": "Quarter-final exit",
+            "stage": "Quarter-finalist"
+          },
+          {
+            "name": "James Odhiambo",
+            "weight": "75kg Junior",
+            "result": "Quarter-final exit",
+            "stage": "Quarter-finalist"
+          },
+          {
+            "name": "Collins Mwenda",
+            "weight": "67kg Youth",
+            "result": "First round exit",
+            "stage": "First Round"
+          },
+          {
+            "name": "Victor Ongeso",
+            "weight": "54kg Youth",
+            "result": "First round exit",
+            "stage": "First Round"
+          }
+        ]
+      }
+    },
+    {
+      "id": "evt-2024-01",
+      "title": "Rift Valley Open Boxing Tournament",
+      "date": "2024-06-22",
+      "type": "competition",
+      "location": "Nakuru Athletic Club, Nakuru",
+      "description": "ORBC's first away competition of 2024. A 6-hour journey to Nakuru — the team showed tremendous heart.",
+      "results": {
+        "summary": "7 fighters. 3 medals. 1 gold.",
+        "gold": 1,
+        "silver": 1,
+        "bronze": 1,
+        "fighters": [
+          {
+            "name": "Kevin Otieno",
+            "weight": "56kg Youth",
+            "result": "Gold Medal",
+            "stage": "Champion"
+          },
+          {
+            "name": "Brian Kamau",
+            "weight": "52kg Youth",
+            "result": "Silver Medal — Lost in final to strong Nakuru opponent",
+            "stage": "Finalist"
+          },
+          {
+            "name": "Mercy Wanjiku",
+            "weight": "60kg Junior Women",
+            "result": "Bronze Medal",
+            "stage": "Semi-finalist"
+          },
+          {
+            "name": "Daniel Muriithi",
+            "weight": "64kg Youth",
+            "result": "Semi-final exit",
+            "stage": "Semi-finalist"
+          },
+          {
+            "name": "Alex Mwangi",
+            "weight": "48kg Youth",
+            "result": "Quarter-final exit",
+            "stage": "Quarter-finalist"
+          },
+          {
+            "name": "Samuel Njoroge",
+            "weight": "70kg Junior",
+            "result": "First round exit",
+            "stage": "First Round"
+          },
+          {
+            "name": "James Odhiambo",
+            "weight": "75kg Junior",
+            "result": "First round exit",
+            "stage": "First Round"
+          }
+        ]
+      }
+    },
+    {
+      "id": "evt-2025-02",
+      "title": "ORBC Community Open Day",
+      "date": "2025-05-10",
+      "type": "community",
+      "location": "Saint Mary's Social Hall, Ongata Rongai",
+      "description": "Annual open day for the community. Free trial sessions, coach meet-and-greet, and a showcase sparring exhibition by our competitive team.",
+      "results": null
+    },
+    {
+      "id": "evt-2025-03",
+      "title": "Nairobi Metropolitan Championships",
+      "date": "2025-08-14",
+      "type": "competition",
+      "location": "Nyayo National Stadium, Nairobi",
+      "description": "Upcoming major championship. ORBC is preparing 14 fighters across youth and junior categories.",
+      "results": null,
+      "upcoming": true
+    }
+  ]
+}

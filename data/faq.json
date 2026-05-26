@@ -1,0 +1,92 @@
+{
+  "categories": [
+    {
+      "id": "getting-started",
+      "title": "Getting Started",
+      "questions": [
+        {
+          "q": "Do I need any experience to join?",
+          "a": "Absolutely not. We welcome complete beginners — in fact, most of our members started with zero boxing experience. Our coaches will take you through the fundamentals step by step from your very first session."
+        },
+        {
+          "q": "Do I have to be in shape to start?",
+          "a": "No. Our beginner classes are designed to build your fitness level from wherever you are. Boxing itself will get you in shape. Just show up."
+        },
+        {
+          "q": "How do I book my first session?",
+          "a": "Simply call or WhatsApp Coach Michael on +254 725 138 063 to book your free trial session. We run sessions daily from 6PM to 8PM at Saint Mary's Social Hall, Magadi Road, Ongata Rongai."
+        },
+        {
+          "q": "Can I come and watch a class before joining?",
+          "a": "Yes, you are very welcome to come and observe a session first. We want you to feel comfortable before committing to anything."
+        },
+        {
+          "q": "What should I bring to my first session?",
+          "a": "Comfortable training clothes, a bottle of water, and your determination. We can advise you on equipment (gloves, wraps) after your trial session — no need to buy anything before you start."
+        }
+      ]
+    },
+    {
+      "id": "training",
+      "title": "Training & Classes",
+      "questions": [
+        {
+          "q": "What classes do you offer?",
+          "a": "We offer Youth Boxing (ages 8–14), Junior Boxing (ages 15–17), Adult Boxing (18+), Women's Boxing, and Advanced/Competition Training for fighters preparing for tournaments. All levels are welcome in our general classes."
+        },
+        {
+          "q": "What are your training hours?",
+          "a": "We train daily from 6PM to 8PM, seven days a week. Specific class times vary — contact the coach for the current schedule or check our Schedule page."
+        },
+        {
+          "q": "How much time does it take to learn boxing?",
+          "a": "Within a few weeks of consistent training you will learn the basic stance, footwork, and punches. Building real skill, confidence, and fitness takes months of regular training. The more consistently you show up, the faster you grow."
+        },
+        {
+          "q": "Is sparring mandatory?",
+          "a": "No. Sparring is completely optional and always introduced gradually when both the coach and the athlete feel ready. Many members train purely for fitness and never spar — that is fully supported."
+        },
+        {
+          "q": "Do you have classes for children?",
+          "a": "Yes. Our youth program (ages 8–14) is one of the things we are most proud of. We teach discipline, respect, and confidence alongside boxing fundamentals in a safe, structured environment."
+        }
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "Competition",
+      "questions": [
+        {
+          "q": "Do I have to compete?",
+          "a": "No. Competition is entirely optional. The majority of our members train for fitness, discipline, and self-development. We only put fighters forward for competition when they are genuinely ready and want to compete."
+        },
+        {
+          "q": "How do I join the competition team?",
+          "a": "Show up consistently, train hard, and listen to your coaches. When you demonstrate the fundamentals, control, and fitness required, your coach will have that conversation with you. There is no shortcut — it is earned."
+        },
+        {
+          "q": "What competitions does ORBC participate in?",
+          "a": "We compete in county-level opens (Kajiado, Nairobi), regional championships, and national qualifying events. See our Achievements and Events pages for our full competition history."
+        }
+      ]
+    },
+    {
+      "id": "membership",
+      "title": "Membership",
+      "questions": [
+        {
+          "q": "How do I find out about membership?",
+          "a": "We keep it personal. Call or WhatsApp Coach Michael on +254 725 138 063 and he will walk you through everything. We do not lock anyone into long-term contracts."
+        },
+        {
+          "q": "Is there a long-term contract?",
+          "a": "No. Unlike many clubs, we do not require long-term contracts. We believe in earning your loyalty through quality training, not locking you in."
+        },
+        {
+          "q": "What are the health requirements to train?",
+          "a": "There are no specific health requirements for our general classes. If you have an existing medical condition, we recommend consulting your doctor before starting any new physical activity — that applies to any sport, not just boxing."
+        }
+      ]
+    }
+  ]
+}
