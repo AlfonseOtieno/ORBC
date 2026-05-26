@@ -1,0 +1,170 @@
+/* ============================================================
+   ORBC — SCHEDULE PAGE STYLES
+   ============================================================ */
+
+.schedule-table {
+  border: 1px solid var(--black-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.schedule-table__head {
+  display: grid;
+  grid-template-columns: 140px repeat(3, 1fr);
+  background: var(--black-card);
+  border-bottom: 2px solid var(--red);
+}
+
+.schedule-table__day-label,
+.schedule-table__col-label {
+  padding: 16px 20px;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white-muted);
+}
+
+.schedule-table__col-label {
+  border-left: 1px solid var(--black-border);
+  color: var(--white-dim);
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 140px repeat(3, 1fr);
+  border-bottom: 1px solid var(--black-border);
+  transition: background 0.2s;
+}
+
+.schedule-row:last-child { border-bottom: none; }
+.schedule-row:hover { background: rgba(255,255,255,0.02); }
+
+.schedule-row__day {
+  padding: 20px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--black-border);
+}
+
+.schedule-row__slot {
+  padding: 16px 20px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--white-dim);
+  border-left: 1px solid var(--black-border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  border-left-width: 3px;
+  line-height: 1.4;
+}
+
+.schedule-row__slot--youth      { border-left-color: #3b82f6; }
+.schedule-row__slot--adult      { border-left-color: var(--red); }
+.schedule-row__slot--womens     { border-left-color: #a855f7; }
+.schedule-row__slot--competition{ border-left-color: #d4af37; }
+.schedule-row__slot--open       { border-left-color: var(--white-muted); }
+
+/* Slot tags */
+.slot-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: var(--radius);
+  width: fit-content;
+}
+
+.slot-tag--youth  { background: rgba(59,130,246,0.15); color: #93c5fd; border: 1px solid rgba(59,130,246,0.3); }
+.slot-tag--adult  { background: rgba(200,16,46,0.15);  color: #f87171; border: 1px solid rgba(200,16,46,0.3); }
+.slot-tag--womens { background: rgba(168,85,247,0.15); color: #d8b4fe; border: 1px solid rgba(168,85,247,0.3); }
+.slot-tag--comp   { background: rgba(212,175,55,0.15); color: #fde68a; border: 1px solid rgba(212,175,55,0.3); }
+.slot-tag--open   { background: rgba(255,255,255,0.06); color: var(--white-dim); border: 1px solid var(--black-border); }
+
+.schedule-legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.schedule-legend__title {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--white-muted);
+}
+
+/* Info cards */
+.schedule-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.schedule-info__card {
+  background: var(--black-card);
+  border: 1px solid var(--black-border);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  transition: border-color 0.3s;
+}
+
+.schedule-info__card:hover { border-color: var(--red); }
+
+.schedule-info__icon { margin-bottom: 20px; }
+
+.schedule-info__title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.schedule-info__text {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--white-dim);
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .schedule-table__head,
+  .schedule-row { grid-template-columns: 100px repeat(3, 1fr); }
+  .schedule-info { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .schedule-table { display: none; }
+  .schedule-mobile-note {
+    display: block;
+    background: var(--black-card);
+    border: 1px solid var(--black-border);
+    border-left: 3px solid var(--red);
+    padding: 20px 24px;
+    font-size: 14px;
+    color: var(--white-dim);
+    border-radius: var(--radius);
+    margin-bottom: 32px;
+  }
+}

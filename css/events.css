@@ -1,0 +1,405 @@
+/* ============================================================
+   ORBC — EVENTS PAGE STYLES
+   ============================================================ */
+
+.events-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Calendar */
+.calendar {
+  background: var(--black-card);
+  border: 1px solid var(--black-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  user-select: none;
+}
+
+.calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--black-border);
+  background: var(--black-mid);
+}
+
+.calendar__month-label {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.calendar__nav {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  border: 1px solid var(--black-border);
+  color: var(--white-dim);
+  transition: all 0.2s;
+  background: transparent;
+  cursor: pointer;
+}
+
+.calendar__nav:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.calendar__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 12px 16px 8px;
+  border-bottom: 1px solid var(--black-border);
+}
+
+.calendar__weekdays span {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--white-muted);
+}
+
+.calendar__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 8px 16px 16px;
+  gap: 4px;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white-dim);
+  border-radius: var(--radius);
+  cursor: pointer;
+  position: relative;
+  transition: background 0.15s, color 0.15s;
+}
+
+.cal-day:hover {
+  background: var(--black-border);
+  color: var(--white);
+}
+
+.cal-day--empty { cursor: default; }
+.cal-day--empty:hover { background: transparent; }
+
+.cal-day--today {
+  color: var(--white);
+  font-weight: 800;
+  background: rgba(200,16,46,0.12);
+  border: 1px solid rgba(200,16,46,0.3);
+}
+
+.cal-day--has-event { color: var(--white); }
+
+.cal-day--selected {
+  background: var(--red) !important;
+  color: var(--white) !important;
+}
+
+.cal-day--other-month { opacity: 0.25; }
+
+.cal-day__dots {
+  display: flex;
+  gap: 2px;
+}
+
+.cal-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.cal-dot--competition { background: #d4af37; }
+.cal-dot--community   { background: #3b82f6; }
+.cal-dot--upcoming    { background: var(--red); }
+
+.calendar-legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white-muted);
+  flex-wrap: wrap;
+}
+
+.calendar-legend .cal-dot {
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+}
+
+/* Panel */
+.events-panel {
+  background: var(--black-card);
+  border: 1px solid var(--black-border);
+  border-radius: var(--radius);
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.events-panel__empty {
+  text-align: center;
+  padding: 48px;
+  color: var(--white-muted);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  line-height: 1.6;
+}
+
+.events-panel__detail {
+  width: 100%;
+  padding: 36px;
+  align-self: flex-start;
+}
+
+.event-detail__type {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+}
+
+.event-detail__type--competition { background: rgba(212,175,55,0.15); color: #fde68a; border: 1px solid rgba(212,175,55,0.3); }
+.event-detail__type--community   { background: rgba(59,130,246,0.15);  color: #93c5fd; border: 1px solid rgba(59,130,246,0.3); }
+.event-detail__type--upcoming    { background: rgba(200,16,46,0.15);   color: #fca5a5; border: 1px solid rgba(200,16,46,0.3); }
+
+.event-detail__title {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.event-detail__date {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 16px;
+}
+
+.event-detail__location {
+  font-size: 14px;
+  color: var(--white-muted);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.event-detail__desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--white-dim);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  border-top: 1px solid var(--black-border);
+  padding-top: 20px;
+}
+
+.event-detail__summary {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.results-medals {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.results-medal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.results-medal--gold   { background: rgba(212,175,55,0.12); color: #d4af37; border: 1px solid rgba(212,175,55,0.3); }
+.results-medal--silver { background: rgba(192,192,192,0.1); color: #c0c0c0; border: 1px solid rgba(192,192,192,0.25);}
+.results-medal--bronze { background: rgba(205,127,50,0.12); color: #cd7f32; border: 1px solid rgba(205,127,50,0.3); }
+
+.fighters-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.fighters-table th {
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--white-muted);
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--black-border);
+}
+
+.fighters-table td {
+  padding: 10px 12px;
+  color: var(--white-dim);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  vertical-align: top;
+}
+
+.fighters-table td:first-child { color: var(--white); font-weight: 500; }
+
+.stage-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: var(--radius);
+}
+
+.stage-badge--champion  { background: rgba(212,175,55,0.15); color: #fde68a; }
+.stage-badge--finalist  { background: rgba(192,192,192,0.1); color: #e2e8f0; }
+.stage-badge--semi      { background: rgba(205,127,50,0.12); color: #fcd34d; }
+.stage-badge--quarter   { background: rgba(255,255,255,0.05); color: var(--white-dim); }
+.stage-badge--first     { background: rgba(255,255,255,0.03); color: var(--white-muted); }
+
+/* Events list */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.event-row {
+  background: var(--black-card);
+  border: 1px solid var(--black-border);
+  border-left: 4px solid;
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 28px;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.3s, transform 0.3s var(--ease-out);
+}
+
+.event-row--competition { border-left-color: #d4af37; }
+.event-row--community   { border-left-color: #3b82f6; }
+.event-row--upcoming    { border-left-color: var(--red); }
+
+.event-row:hover {
+  transform: translateX(4px);
+}
+
+.event-row__date {
+  font-family: var(--font-heading);
+  text-align: center;
+}
+
+.event-row__date-day {
+  display: block;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--white);
+}
+
+.event-row__date-month {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white-muted);
+  margin-top: 4px;
+}
+
+.event-row__info {}
+
+.event-row__title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.event-row__location {
+  font-size: 13px;
+  color: var(--white-muted);
+}
+
+.event-row__medals {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  justify-content: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .events-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .event-row { grid-template-columns: 80px 1fr; }
+  .event-row__medals { display: none; }
+  .events-panel__detail { padding: 20px; }
+  .fighters-table { font-size: 12px; }
+}
