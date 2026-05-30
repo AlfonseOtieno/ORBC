@@ -2,34 +2,45 @@
   "club_stats": {
     "founded": 2014,
     "total_fighters_trained": 200,
-    "total_medals": 47,
     "competition_years": 6,
-    "gold_medals": 18
+    "competitions_entered": 10
   },
-  "headline_achievements": [
+  "notable_fighters": [
     {
-      "icon": "trophy",
-      "title": "Kajiado County Champions",
-      "year": "2025",
-      "description": "3 gold medals at the Kajiado County Intermediate League Open. Our strongest team performance to date."
+      "name": "Brian Kamau",
+      "category": "52kg Youth",
+      "achievements": "Multiple county and regional competitions. One of the most consistent competitors ORBC has produced. Has represented the club at national level.",
+      "active": true
     },
     {
-      "icon": "star",
-      "title": "Nairobi Region Podium",
-      "year": "2024",
-      "description": "2 gold, 2 silver, 1 bronze at the Nairobi Region Boxing Championships — our biggest stage yet."
+      "name": "Kevin Otieno",
+      "category": "56kg Youth",
+      "achievements": "Competed at county, regional, and national level. Has faced opposition from clubs across Kenya and grown with every bout.",
+      "active": true
     },
     {
-      "icon": "shield",
-      "title": "Youth Development Leaders",
-      "year": "2014–Present",
-      "description": "Over 200 young people from Ongata Rongai trained since founding. Multiple fighters progressed to national competitions."
+      "name": "Daniel Muriithi",
+      "category": "64kg Youth",
+      "achievements": "A product of the ORBC youth program. Has competed at multiple county-level events and continues to develop under Coach Michael.",
+      "active": true
     },
     {
-      "icon": "award",
-      "title": "5.0 Google Rating",
-      "year": "2026",
-      "description": "40+ reviews — the community speaks. Consistently rated the best boxing club in Ongata Rongai."
+      "name": "Alex Mwangi",
+      "category": "48kg Youth",
+      "achievements": "Began training at ORBC as a young teenager. Has competed in county opens and regional competitions, representing the club with discipline.",
+      "active": true
+    },
+    {
+      "name": "Samuel Njoroge",
+      "category": "70kg Junior",
+      "achievements": "Part of ORBC's junior competition team. Has participated in intermediate league events and regional opens.",
+      "active": true
+    },
+    {
+      "name": "James Odhiambo",
+      "category": "75kg Junior",
+      "achievements": "Came through the ORBC youth program and progressed to the competition team. Competed at junior level across Nairobi and Kajiado regions.",
+      "active": false
     }
   ],
   "yearly_records": [
@@ -37,75 +48,60 @@
       "year": 2025,
       "competitions": 2,
       "fighters_sent": 14,
-      "gold": 3,
-      "silver": 3,
-      "bronze": 2,
-      "highlights": ["Kajiado County Intermediate League — 3 gold", "Community Open Day drew 80+ attendees"]
+      "highlights": [
+        "Kajiado County Intermediate League Open — 14 fighters competed",
+        "Strongest team turnout in club history",
+        "Community Open Day drew 80+ attendees from Ongata Rongai"
+      ]
     },
     {
       "year": 2024,
       "competitions": 3,
       "fighters_sent": 22,
-      "gold": 3,
-      "silver": 3,
-      "bronze": 2,
-      "highlights": ["Nairobi Region Championships — 2 gold", "First appearance at Kasarani Indoor Arena", "Rift Valley Open — 1 gold"]
+      "highlights": [
+        "Nairobi Region Boxing Championships — first appearance at Kasarani Indoor Arena",
+        "Rift Valley Open — first away competition, 6-hour journey to Nakuru",
+        "22 fighters sent to competition across the year"
+      ]
     },
     {
       "year": 2023,
       "competitions": 2,
       "fighters_sent": 12,
-      "gold": 2,
-      "silver": 2,
-      "bronze": 3,
-      "highlights": ["Kajiado County Open — 2 gold", "Junior development squad formed"]
+      "highlights": [
+        "Kajiado County Open — 12 fighters represented ORBC",
+        "Junior development squad formed and entered competition for the first time"
+      ]
     },
     {
       "year": 2022,
       "competitions": 2,
       "fighters_sent": 8,
-      "gold": 2,
-      "silver": 1,
-      "bronze": 1,
-      "highlights": ["First inter-county competition", "ORBC Junior Program launched"]
+      "highlights": [
+        "First inter-county competition in club history",
+        "ORBC Junior Program officially launched",
+        "8 fighters sent — the beginning of our competitive programme"
+      ]
     },
     {
       "year": 2021,
       "competitions": 1,
       "fighters_sent": 5,
-      "gold": 1,
-      "silver": 1,
-      "bronze": 0,
-      "highlights": ["Post-COVID return to competition", "Club restructure under Coach Michael Ragot"]
+      "highlights": [
+        "Return to competition after COVID-19 disruption",
+        "Club restructured under Coach Michael Ragot",
+        "5 fighters competed — the rebuild begins"
+      ]
     },
     {
       "year": 2019,
       "competitions": 2,
       "fighters_sent": 7,
-      "gold": 3,
-      "silver": 1,
-      "bronze": 2,
-      "highlights": ["Best pre-COVID record", "3 county golds"]
-    }
-  ],
-  "notable_fighters": [
-    {
-      "name": "Brian Kamau",
-      "category": "52kg Youth",
-      "achievements": "2× County Champion (2024, 2025). Nairobi Region Gold 2024. Club's most decorated active fighter.",
-      "active": true
-    },
-    {
-      "name": "Kevin Otieno",
-      "category": "56kg Youth",
-      "achievements": "County Gold 2025. Rift Valley Open Champion 2024. Nairobi Region Gold 2024.",
-      "active": true
-    },
-    {
-      "name": "Mercy Wanjiku",
-      "category": "60kg Junior Women",
-      "achievements": "County Champion 2025. First female ORBC champion. Bronze at Nairobi Region 2024.",
-      "active": true
+      "highlights": [
+        "Best pre-COVID competition year",
+        "7 fighters competed across 2 events",
+        "County level competition — ORBC establishing its presence"
+      ]
     }
   ]
 }
