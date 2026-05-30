@@ -17,44 +17,38 @@
   <main>
 
     <header class="page-hero">
-      <div class="page-hero__bg" style="background-image:url('assets/images/gallery-hero.jpg')"></div>
+      <div class="page-hero__bg" style="background-image:url('assets/images/gallery-1.jpg')"></div>
       <div class="container page-hero__content">
         <p class="page-hero__label">Life at ORBC</p>
         <h1 class="page-hero__title">Gallery</h1>
       </div>
     </header>
 
-    <section class="section section--dark" aria-labelledby="gallery-title">
+    <section class="section section--dark" aria-label="Gallery">
       <div class="container">
-
-        <!-- Filter tabs -->
-        <div class="gallery-filters reveal" role="tablist" aria-label="Gallery filters">
-          <button class="gallery-filter active" data-filter="all" role="tab" aria-selected="true">All</button>
-          <button class="gallery-filter" data-filter="training" role="tab" aria-selected="false">Training</button>
-          <button class="gallery-filter" data-filter="competition" role="tab" aria-selected="false">Competition</button>
-          <button class="gallery-filter" data-filter="community" role="tab" aria-selected="false">Community</button>
-          <button class="gallery-filter" data-filter="video" role="tab" aria-selected="false">Videos</button>
-        </div>
-
-        <!-- Gallery grid -->
         <div class="gallery-grid" id="gallery-grid" aria-label="Gallery">
           <!-- Rendered by gallery.js -->
         </div>
-
       </div>
     </section>
 
     <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Media viewer" hidden>
       <button class="lightbox__close" id="lb-close" aria-label="Close">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
       </button>
       <button class="lightbox__nav lightbox__nav--prev" id="lb-prev" aria-label="Previous">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
       </button>
       <div class="lightbox__media" id="lb-media"></div>
       <button class="lightbox__nav lightbox__nav--next" id="lb-next" aria-label="Next">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
       </button>
       <div class="lightbox__caption" id="lb-caption"></div>
     </div>

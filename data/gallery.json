@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "type": "video",
+      "src": "assets/videos/hero-training.mp4",
+      "poster": "assets/images/gallery-video-thumb.jpg"
+    },
+    {
+      "type": "image",
+      "src": "assets/images/gallery-1.jpg",
+      "alt": "Training at ORBC"
+    },
+    {
+      "type": "image",
+      "src": "assets/images/program-youth.jpg",
+      "alt": "Youth boxing program"
+    },
+    {
+      "type": "image",
+      "src": "assets/images/gallery-2.jpg",
+      "alt": "Pad work session"
+    },
+    {
+      "type": "video",
+      "src": "assets/videos/hero-sparring.mp4",
+      "poster": "assets/images/gallery-video-thumb.jpg"
+    },
+    {
+      "type": "image",
+      "src": "assets/images/gallery-3.jpg",
+      "alt": "ORBC fighters"
+    },
+    {
+      "type": "image",
+      "src": "assets/images/program-adult.jpg",
+      "alt": "Adult boxing training"
+    },
+    {
+      "type": "image",
+      "src": "assets/images/gallery-4.jpg",
+      "alt": "Competition day"
+    },
+    {
+      "type": "image",
+      "src": "assets/images/achievements-group.jpg",
+      "alt": "ORBC fighters after competition"
+    },
+    {
+      "type": "image",
+      "src": "assets/images/gallery-5.jpg",
+      "alt": "ORBC team"
+    },
+    {
+      "type": "image",
+      "src": "assets/images/program-competition.jpg",
+      "alt": "Competition training"
+    },
+    {
+      "type": "image",
+      "src": "assets/images/gallery-6.jpg",
+      "alt": "Sparring session"
+    }
+  ]
+}
