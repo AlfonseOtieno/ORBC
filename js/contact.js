@@ -2,6 +2,8 @@ import { renderNav } from './nav.js';
 import { renderFooter } from './footer.js';
 import { initScrollReveal, initLazyImages } from './utils.js';
 
+const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
 function validateForm() {
   let valid = true;
 
@@ -56,20 +58,58 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     if (!validateForm()) return;
 
+    // Disable button and show sending state
     submit.disabled = true;
-    submit.textContent = 'Sending...';
+    submit.innerHTML = `
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           style="animation:spin 1s linear infinite">
+        <circle cx="12" cy="12" r="10" stroke-opacity="0.25"/>
+        <path d="M12 2a10 10 0 0 1 10 10" />
+      </svg>
+      Sending...`;
 
-    // Simulate send (replace with your actual form endpoint e.g. Formspree)
-    await new Promise(r => setTimeout(r, 1200));
+    try {
+      const formData = {
+        name:    document.getElementById('name').value,
+        phone:   document.getElementById('phone').value,
+        email:   document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
+        _replyto: document.getElementById('email').value,
+      };
 
-    form.querySelectorAll('.form-input').forEach(i => i.value = '');
-    success.hidden = false;
-    submit.disabled = false;
-    submit.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message`;
-    success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        // Only show success AFTER confirmed send
+        form.querySelectorAll('.form-input').forEach(i => i.value = '');
+        success.hidden = false;
+        success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        submit.disabled = false;
+        submit.innerHTML = `
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+          Send Message`;
+      } else {
+        throw new Error('Send failed');
+      }
+    } catch {
+      submit.disabled = false;
+      submit.innerHTML = `
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+        Send Message`;
+      alert('Something went wrong. Please call us directly on +254 725 138 063.');
+    }
   });
 
-  // Live validation clear on input
+  // Clear errors on input
   form.querySelectorAll('.form-input').forEach(input => {
     input.addEventListener('input', () => {
       input.classList.remove('error');
