@@ -5,6 +5,8 @@ import { renderNav }    from './nav.js';
 import { renderFooter } from './footer.js';
 import { initScrollReveal, initLazyImages, initCounters } from './utils.js';
 
+const PLACEHOLDER_IMG = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='%23161616'/%3E%3C/svg%3E";
+
 /* ── Dual hero video: A plays to end, then B, then loops back to A ── */
 function initHeroVideos() {
   const videoA = document.getElementById('hero-video-a');
@@ -48,7 +50,7 @@ function renderGalleryTeaser() {
       return `
         <div class="gallery-thumb reveal reveal-d${Math.min(i + 1, 5)}">
           <video data-autoplay muted loop playsinline
-            poster="${item.poster || 'assets/images/hero-placeholder.jpg'}"
+            poster="${item.poster || PLACEHOLDER_IMG}"
             aria-label="Training video">
             <source src="${item.src}" type="video/mp4" />
           </video>
@@ -58,7 +60,7 @@ function renderGalleryTeaser() {
       <div class="gallery-thumb reveal reveal-d${Math.min(i + 1, 5)}">
         <img
           data-src="${item.src}"
-          src="assets/images/hero-placeholder.jpg"
+          src="${PLACEHOLDER_IMG}"
           alt="${item.alt}"
           width="400" height="280"
           loading="lazy"

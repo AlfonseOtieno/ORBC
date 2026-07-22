@@ -38,7 +38,7 @@ function renderGrid() {
       <div class="gallery-item" data-index="${i}" role="button" tabindex="0" aria-label="${item.alt || ''}">
         <img
           data-src="${item.src}"
-          src="assets/images/hero-placeholder.jpg"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='%23161616'/%3E%3C/svg%3E"
           alt="${item.alt || ''}"
           loading="lazy"
         />
