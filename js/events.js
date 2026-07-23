@@ -90,6 +90,49 @@ function getStageBadgeClass(stage) {
   return 'stage-badge--first';
 }
 
+function formatMethodLine(f) {
+  const parts = [];
+  const method = (f.method || '').toLowerCase();
+  if (method === 'tko' || method === 'ko') {
+    parts.push(f.method.toUpperCase());
+    if (f.round) parts.push(`Round ${f.round}`);
+  } else if (method === 'walkover') {
+    parts.push('Walkover');
+  } else {
+    // decision, split decision, majority decision, etc.
+    parts.push(f.method.replace(/\b\w/g, c => c.toUpperCase()));
+    if (f.score) parts.push(f.score);
+  }
+  return parts.join(' · ');
+}
+
+function renderFightCard(f, i) {
+  const segmentBadge = f.segment
+    ? `<span class="fight-card__segment">${f.segment}</span>`
+    : '';
+  const opponentClub = f.opponentClub ? ` <span class="fight-card__club">(${f.opponentClub})</span>` : '';
+  const numberLabel = f.number ? `<span class="fight-card__number">#${f.number}</span>` : '';
+
+  return `
+    <div class="fight-card fight-card--${f.result}${f.exhibition ? ' fight-card--exhibition' : ''} reveal reveal-d${Math.min(i%5+1,5)}">
+      <div class="fight-card__top">
+        ${numberLabel}
+        ${segmentBadge}
+        <span class="fight-card__category">${f.category}</span>
+      </div>
+      <div class="fight-card__matchup">
+        <span class="fight-card__fighter">${f.fighter}</span>
+        <span class="fight-card__vs">vs</span>
+        <span class="fight-card__opponent">${f.opponent}${opponentClub}</span>
+      </div>
+      <div class="fight-card__bottom">
+        <span class="fight-card__result-badge fight-card__result-badge--${f.result}">${f.result === 'win' ? 'Win' : 'Loss'}</span>
+        <span class="fight-card__method">${formatMethodLine(f)}</span>
+      </div>
+      ${f.note ? `<p class="fight-card__note">${f.note}</p>` : ''}
+    </div>`;
+}
+
 function showEventDetail(events) {
   const empty  = document.getElementById('panel-empty');
   const detail = document.getElementById('panel-detail');
@@ -114,26 +157,37 @@ function showEventDetail(events) {
   let resultsHTML = '';
   if (evt.results) {
     const r = evt.results;
+    const recordHTML = r.record
+      ? `<div class="results-medals">
+           <span class="results-medal results-medal--gold">${r.record.wins} Wins</span>
+           <span class="results-medal results-medal--bronze">${r.record.losses} Losses</span>
+         </div>`
+      : `<div class="results-medals">
+           <span class="results-medal results-medal--gold">&#9733; ${r.gold} Gold</span>
+           <span class="results-medal results-medal--silver">&#9733; ${r.silver} Silver</span>
+           <span class="results-medal results-medal--bronze">&#9733; ${r.bronze} Bronze</span>
+         </div>`;
+
+    const bodyHTML = r.fights
+      ? `<div class="fight-card-list">${r.fights.map((f, i) => renderFightCard(f, i)).join('')}</div>`
+      : `<table class="fighters-table">
+          <thead><tr><th>Fighter</th><th>Category</th><th>Result</th><th>Stage</th></tr></thead>
+          <tbody>
+            ${r.fighters.map(f => `
+              <tr>
+                <td>${f.name}</td>
+                <td>${f.weight}</td>
+                <td>${f.result}</td>
+                <td><span class="stage-badge ${getStageBadgeClass(f.stage)}">${f.stage}</span></td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>`;
+
     resultsHTML = `
       <p class="event-detail__summary">${r.summary}</p>
-      <div class="results-medals">
-        <span class="results-medal results-medal--gold">&#9733; ${r.gold} Gold</span>
-        <span class="results-medal results-medal--silver">&#9733; ${r.silver} Silver</span>
-        <span class="results-medal results-medal--bronze">&#9733; ${r.bronze} Bronze</span>
-      </div>
-      <table class="fighters-table">
-        <thead><tr><th>Fighter</th><th>Category</th><th>Result</th><th>Stage</th></tr></thead>
-        <tbody>
-          ${r.fighters.map(f => `
-            <tr>
-              <td>${f.name}</td>
-              <td>${f.weight}</td>
-              <td>${f.result}</td>
-              <td><span class="stage-badge ${getStageBadgeClass(f.stage)}">${f.stage}</span></td>
-            </tr>
-          `).join('')}
-        </tbody>
-      </table>`;
+      ${recordHTML}
+      ${bodyHTML}`;
   }
 
   detail.innerHTML = `
@@ -147,6 +201,10 @@ function showEventDetail(events) {
     <p class="event-detail__desc">${evt.description}</p>
     ${resultsHTML}
   `;
+
+  // Newly-injected cards carry the `reveal` class but were never seen by the
+  // observer set up on page load — re-run it so they actually animate in.
+  initScrollReveal();
 }
 
 function renderEventsList() {
@@ -156,7 +214,11 @@ function renderEventsList() {
   el.innerHTML = sorted.map((evt, i) => {
     const d = new Date(evt.date + 'T00:00:00');
     const type = evt.upcoming ? 'upcoming' : evt.type;
-    const medals = evt.results ? `
+    const medals = evt.results && evt.results.record ? `
+      <div class="event-row__medals">
+        <span class="results-medal results-medal--gold">${evt.results.record.wins}W</span>
+        <span class="results-medal results-medal--bronze">${evt.results.record.losses}L</span>
+      </div>` : evt.results ? `
       <div class="event-row__medals">
         <span class="results-medal results-medal--gold">&#9733; ${evt.results.gold}</span>
         <span class="results-medal results-medal--silver">&#9733; ${evt.results.silver}</span>
