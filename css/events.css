@@ -178,6 +178,7 @@
   gap: 16px;
   line-height: 1.6;
 }
+.events-panel__empty[hidden] { display: none; }
 
 .events-panel__detail {
   width: 100%;

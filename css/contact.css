@@ -239,6 +239,7 @@
   color: var(--white-dim);
   line-height: 1.6;
 }
+.form-success[hidden] { display: none; }
 
 .form-success strong { color: var(--white); }
 .form-success a { color: var(--red); }
